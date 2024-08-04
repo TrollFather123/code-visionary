@@ -5,6 +5,7 @@
 import { PaletteMode } from "@mui/material";
 import type { ThemeOptions } from "@mui/material/styles";
 import { Montserrat } from "next/font/google";
+import localFont from 'next/font/local'
 import { pallete, primaryColors } from "./_muiPalette";
 
 /**
@@ -16,6 +17,21 @@ import { pallete, primaryColors } from "./_muiPalette";
  * @returns The function `MuiThemeOptions` returns a `ThemeOptions` object.
  */
 
+export const earth_orbiter = localFont({
+  src: [
+    {
+      path: "../public/assets/fonts/earthorbiter.ttf",
+      weight: "400",
+    },
+    {
+      path: "../public/assets/fonts/earthorbiterbold.ttf",
+      weight: "700",
+    },
+  ],
+  display: "swap",
+  variable: "--font-earth_orbiter",
+});
+
 export const montserrat = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
@@ -26,13 +42,13 @@ export const MuiThemeOptions = (mode: PaletteMode): ThemeOptions => {
   return {
     palette: pallete(mode),
     typography: {
-      fontFamily: ["Roboto"].join(","),
+      fontFamily: [`${montserrat.style.fontFamily}`].join(","),
       fontSize: 16,
       h1: {
-        fontSize: "67px",
+        fontSize: "96px",
         lineHeight: "1.1em",
         fontWeight: "700",
-        fontFamily: "Cinzel",
+        fontFamily: earth_orbiter.style.fontFamily,
         "@media(max-width:991px)": {
           fontSize: "22px",
           lineHeight: "1.1em"
@@ -41,8 +57,8 @@ export const MuiThemeOptions = (mode: PaletteMode): ThemeOptions => {
       h2: {
         fontSize: "48px",
         lineHeight: "1.1em",
-        fontWeight: "700",
-        fontFamily: "Cinzel",
+        fontWeight: "400",
+        fontFamily: earth_orbiter.style.fontFamily,
         "@media(max-width:991px)": {
           fontSize: "22px",
           lineHeight: "26px"
@@ -52,7 +68,7 @@ export const MuiThemeOptions = (mode: PaletteMode): ThemeOptions => {
         fontSize: "20px",
         lineHeight: "1.1em",
         fontWeight: "700",
-        fontFamily: "Cinzel",
+        fontFamily: earth_orbiter.style.fontFamily,
         "@media(max-width:991px)": {
           fontSize: "18px",
           lineHeight: "1.1em"
@@ -62,7 +78,7 @@ export const MuiThemeOptions = (mode: PaletteMode): ThemeOptions => {
         fontSize: "18px",
         lineHeight: "1.3",
         fontWeight: "500",
-        fontFamily: "Cinzel",
+        fontFamily: earth_orbiter.style.fontFamily,
         "@media(max-width:991px)": {
           fontSize: "16px",
           lineHeight: "1.3"
@@ -72,7 +88,7 @@ export const MuiThemeOptions = (mode: PaletteMode): ThemeOptions => {
         fontSize: "15px",
         lineHeight: "1.4",
         fontWeight: "500",
-        fontFamily: "Cinzel",
+        fontFamily: earth_orbiter.style.fontFamily,
         "@media(max-width:991px)": {
           fontSize: "12px",
           lineHeight: "1.4"
@@ -82,7 +98,7 @@ export const MuiThemeOptions = (mode: PaletteMode): ThemeOptions => {
         fontSize: "12px",
         lineHeight: "1.5",
         fontWeight: "500",
-        fontFamily: "Cinzel",
+        fontFamily: earth_orbiter.style.fontFamily,
         "@media(max-width:991px)": {
           fontSize: "12px",
           lineHeight: "1.5"

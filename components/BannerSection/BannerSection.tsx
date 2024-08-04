@@ -28,10 +28,10 @@ const BannerSection = () => {
               }}
               whileInView={{ y: 0 }}
             >
-              <h1>
+              <Typography variant="h1">
                 Transforming Ideas into<br></br>
                 <span className="gradient_text">Digital Reality</span>
-              </h1>
+              </Typography>
             </motion.div>
             <Typography variant="body1">
               Web Design, App Development, Branding & Marketing Services

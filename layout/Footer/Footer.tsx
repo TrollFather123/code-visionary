@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 import assest from "@/json/assest";
 import { primaryColors } from "@/themes/_muiPalette";
-import { montserrat } from "@/themes/_muiTheme";
+import { earth_orbiter, montserrat } from "@/themes/_muiTheme";
 import InputFieldCommon from "@/ui/CommonInput/CommonInput";
 import CustomButtonPrimary from "@/ui/CustomButtons/CustomButtonPrimary";
 import CustomSelect from "@/ui/Filter/CustomSelect";
@@ -136,6 +136,7 @@ const FooterWrap = styled(Box)`
           padding-left: 56px;
         }
         span {
+          font-family: ${earth_orbiter.style.fontFamily};
           display: inline-block;
           -webkit-text-stroke-color: #fff;
           -webkit-text-stroke-width: 1px;
@@ -234,18 +235,7 @@ const Footer = () => {
               </Grid>
               <Grid item md={3} xs={12}>
                 <Box className="ftr_fld">
-                  <CustomSelect
-                    displayEmpty
-                    // renderValue={(selected) => {
-                    //   if (selected.length === 0) {
-                    //     return Subject;
-                    //   }
-
-                    //   return selected.join(", ");
-                    // }}
-                    defaultValue="Subject"
-                    // IconComponent={<ArrowDropDownIcon />}
-                  >
+                  <CustomSelect initialValue="Subject">
                     <MenuItem value="">Subject</MenuItem>
                     <MenuItem value="Subject1">Subject1</MenuItem>
                     <MenuItem value="Subject2">Subject2</MenuItem>

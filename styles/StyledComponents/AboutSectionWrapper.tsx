@@ -1,4 +1,5 @@
 import { primaryColors } from "@/themes/_muiPalette";
+import { earth_orbiter } from "@/themes/_muiTheme";
 import { Box, styled } from "@mui/material";
 
 export const AboutSectionWrapper = styled(Box)`
@@ -32,7 +33,7 @@ export const AboutSectionWrapper = styled(Box)`
     }
     h2 {
       padding-right: 24px;
-      font-family: "Earth Orbiter Bold";
+      font-family: ${earth_orbiter.style.fontFamily};
       font-weight: 400;
       color: ${primaryColors.color192527};
     }

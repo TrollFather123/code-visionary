@@ -1,5 +1,5 @@
 import { primaryColors } from "@/themes/_muiPalette";
-import { montserrat } from "@/themes/_muiTheme";
+import { earth_orbiter, montserrat } from "@/themes/_muiTheme";
 import { Box, styled } from "@mui/material";
 
 export const CommonHeadingWrapper = styled(Box)`
@@ -29,7 +29,7 @@ export const CommonHeadingWrapper = styled(Box)`
     span {
       display: inline-block;
       color: ${primaryColors.white};
-      font-family: "Earth Orbiter Bold";
+      font-family: ${earth_orbiter.style.fontFamily};
       font-size: 20px;
       font-weight: 700;
       line-height: 1;
@@ -41,7 +41,7 @@ export const CommonHeadingWrapper = styled(Box)`
     color: ${primaryColors.white};
     line-height: 1.1;
     margin-bottom: 24px;
-    font-family: "Earth Orbiter Bold";
+    font-family: ${earth_orbiter.style.fontFamily};
   }
   p {
     font-size: 20px;

@@ -45,7 +45,7 @@ export const BannerWrapper = styled(Box)`
       font-size: 24px;
 
       h1 {
-        font-size: 40px;
+        /* font-size: 40px; */
         line-height: 1.2;
         text-transform: uppercase;
         color: ${primaryColors.white};

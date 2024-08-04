@@ -1,8 +1,11 @@
 /* eslint-disable react/destructuring-assignment */
 import { primaryColors } from "@/themes/_muiPalette";
 import styled from "@emotion/styled";
+import { IconButton, MenuItem } from "@mui/material";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import Select, { SelectProps } from "@mui/material/Select";
+import { useState } from "react";
+import DropDownIcon from "../Icons/DropdownIcon";
 
 const CustomSelectWrapper = styled(Select)`
   &.MuiOutlinedInput-root {
@@ -38,8 +41,11 @@ const CustomSelectWrapper = styled(Select)`
     }
   }
 `;
-interface CustomSelectProps extends SelectProps {}
+interface CustomSelectProps extends SelectProps {
+  initialValue: string;
+}
 const CustomSelect: React.FC<CustomSelectProps & SelectProps> = ({
+  initialValue,
   ...props
 }) => {
   const MenuProps = {
@@ -51,21 +57,32 @@ const CustomSelect: React.FC<CustomSelectProps & SelectProps> = ({
     }
   };
 
+  const [value, setValue] = useState("");
+
+  const handleChange = (event: any) => {
+    setValue(event.target.value);
+  };
+
   return (
     <CustomSelectWrapper
       displayEmpty
       input={<OutlinedInput />}
-      IconComponent={props?.IconComponent}
+      IconComponent={(props) => {
+        return (
+          <IconButton {...props}>
+            <DropDownIcon />
+          </IconButton>
+        );
+      }}
       MenuProps={MenuProps}
       inputProps={{ "aria-label": "Without label" }}
-      // className={props.className}
+      value={value}
+      onChange={handleChange}
       {...props}
     >
-      {/* {dataset.map((name) => (
-        <MenuItem key={name} value={name} className="menu_item">
-          {name}
-        </MenuItem>
-      ))} */}
+      <MenuItem value="" className="menu_item">
+        {initialValue}
+      </MenuItem>
       {props.children}
     </CustomSelectWrapper>
   );

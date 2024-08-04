@@ -1,4 +1,5 @@
 import { primaryColors } from "@/themes/_muiPalette";
+import { earth_orbiter } from "@/themes/_muiTheme";
 import { Box, styled } from "@mui/material";
 
 export const ProtfolioSectionWrapper = styled(Box)`
@@ -35,7 +36,7 @@ export const ProtfolioSectionWrapper = styled(Box)`
     span {
       max-width: 555px;
       display: inline-block;
-      font-family: "Earth Orbiter Bold";
+      font-family: ${earth_orbiter.style.fontFamily};
       font-weight: 400;
       font-size: 94px;
       background: linear-gradient(
@@ -66,7 +67,7 @@ export const ProtfolioSectionWrapper = styled(Box)`
         color: ${primaryColors.white};
         background: ${primaryColors.primary};
         border: 2px solid ${primaryColors.primary};
-        font-family: "Earth Orbiter Bold";
+        font-family: ${earth_orbiter.style.fontFamily};
         transition: all 0.3s ease-in-out;
         &:hover {
           background: transparent;
