@@ -7,7 +7,7 @@ import { Box, Button } from "@mui/material";
 import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/effect-cards";
-import { EffectCards } from "swiper/modules";
+import { EffectCards, Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TestimonialCard from "./TestimonialCard";
 
@@ -24,10 +24,13 @@ const TestimonialCarousel = () => {
       <Swiper
         effect={"cards"}
         grabCursor={true}
-        modules={[EffectCards]}
+        loop
+        centeredSlides={true}
+        modules={[Navigation, EffectCards, Autoplay]}
         navigation={{
           prevEl: prevRef.current,
-          nextEl: nextRef.current
+          nextEl: nextRef.current,
+          enabled: true
         }}
         cardsEffect={{
           rotate: false,
