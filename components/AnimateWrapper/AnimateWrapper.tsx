@@ -66,6 +66,27 @@ const AnimateWrapper = () => {
       opacity: 0
     });
 
+    gsap.set(".abt_text_rgt", {
+      y: "30vh",
+      opacity: 0
+    });
+    gsap.set(".img1", {
+      y: "30vh",
+      x: "100vw"
+    });
+    gsap.set(".img2", {
+      y: "-30vh",
+      x: "-100vw"
+    });
+    gsap.set(".img5", {
+      y: "50vh",
+      x: "-100vw"
+    });
+    gsap.set(".img7", {
+      y: "-30vh",
+      x: "100vw"
+    });
+
     const tl = gsap.timeline({
       defaults: {
         duration: 1,
@@ -89,6 +110,47 @@ const AnimateWrapper = () => {
         },
         "-=1"
       )
+
+      .to(
+        ".abt_text_rgt",
+        {
+          y: 0,
+          opacity: 1
+        },
+        "+=.25"
+      )
+      .to(
+        ".img2",
+        {
+          y: 0,
+          x:0,
+        },
+        "-=.5"
+      )
+      .to(
+        ".img7",
+        {
+          y: 0,
+          x:0,
+        },
+        "-=1"
+      )
+      .to(
+        ".img5",
+        {
+          y: 0,
+          x:0,
+        },
+        "-=1"
+      )
+      .to(
+        ".img1",
+        {
+          y: 0,
+          x:0,
+        },
+        "-=1"
+      )
       .to(
         ".about_sec",
         {
@@ -103,7 +165,7 @@ const AnimateWrapper = () => {
           opacity: 1,
           pointerEvents: "inherit"
         },
-        "-=1"
+        "-=.25"
       )
       .to(
         ".weBck_lyr",
