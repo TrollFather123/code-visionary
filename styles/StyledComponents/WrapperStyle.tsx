@@ -289,7 +289,7 @@ export const WrapperStyle = styled(Box)`
   // validation message
   .MuiFormHelperText-root {
     font-size: 16px !important;
-    color: var(--colorff0000) !important;
+    color: var(--colorff0000);
   }
 
   .errSpan {
