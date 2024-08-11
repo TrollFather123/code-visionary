@@ -45,11 +45,25 @@ const AnimateWrapper = () => {
     });
     gsap.set(".mbl_img3", {
       right: "-45px",
-      top: "-40px"
+      top: "-40px",
+      opacity: 0
     });
     gsap.set(".mbl_img4", {
       right: "60px",
-      bottom: "290px"
+      bottom: "290px",
+      opacity: 0
+    });
+
+    gsap.set(".mbl_img1", {
+      left: "-100px",
+      top: "170px",
+      opacity: 0
+    });
+
+    gsap.set(".mbl_img2", {
+      left: "60px",
+      bottom: "230px",
+      opacity: 0
     });
 
     const tl = gsap.timeline({
@@ -161,6 +175,13 @@ const AnimateWrapper = () => {
           opacity: 1
         },
         "-=1"
+      )
+      .to(
+        [".mbl_img1", ".mbl_img2", ".mbl_img3", ".mbl_img4"],
+        {
+          opacity: 1
+        },
+        "-=.5"
       );
 
     ScrollTrigger.create({
