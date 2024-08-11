@@ -159,7 +159,15 @@ export const WrapperStyle = styled(Box)`
   } */
 
   .cmn_gap {
-    padding: 100px 0;
+    padding: 120px 0 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* display: flex;
+    align-items: center; */
   }
 
   .cmn_gap_top {
