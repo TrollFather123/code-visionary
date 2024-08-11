@@ -123,7 +123,7 @@ const AnimateWrapper = () => {
         ".img2",
         {
           y: 0,
-          x:0,
+          x: 0
         },
         "-=.5"
       )
@@ -131,7 +131,7 @@ const AnimateWrapper = () => {
         ".img7",
         {
           y: 0,
-          x:0,
+          x: 0
         },
         "-=1"
       )
@@ -139,7 +139,7 @@ const AnimateWrapper = () => {
         ".img5",
         {
           y: 0,
-          x:0,
+          x: 0
         },
         "-=1"
       )
@@ -147,7 +147,7 @@ const AnimateWrapper = () => {
         ".img1",
         {
           y: 0,
-          x:0,
+          x: 0
         },
         "-=1"
       )
@@ -244,15 +244,63 @@ const AnimateWrapper = () => {
           opacity: 1
         },
         "-=.5"
+      )
+      .to(
+        ".portfolio_sec",
+        {
+          opacity: 1,
+          pointerEvents: "inherit"
+        },
+        "+=1"
+      )
+      .to(
+        ".why_sec",
+        {
+          opacity: 0,
+          pointerEvents: "none"
+        },
+        "-=1"
+      )
+      .to(
+        ".team_sec",
+        {
+          opacity: 1,
+          pointerEvents: "inherit"
+        },
+        "+=1"
+      )
+      .to(
+        ".portfolio_sec",
+        {
+          opacity: 0,
+          pointerEvents: "none"
+        },
+        "-=1"
+      )
+      .to(
+        ".testimonial_sec",
+        {
+          opacity: 1,
+          pointerEvents: "inherit"
+        },
+        "+=1"
+      )
+      .to(
+        ".team_sec",
+        {
+          opacity: 0,
+          pointerEvents: "none"
+        },
+        "-=0.2"
       );
 
     ScrollTrigger.create({
       trigger: mainRef.current,
       start: "top top",
-      end: "150%",
+      end: "350%",
       scrub: 2,
       pin: true,
-      markers: true,
+      markers: false,
       animation: tl
     });
   });
@@ -265,8 +313,8 @@ const AnimateWrapper = () => {
       <ServiceSection className="service_sec" />
       <WhySection className="why_sec" />
       <ProtfolioSection className="portfolio_sec" />
-      <TeamSection />
-      <TestimonialSection />
+      <TeamSection className="team_sec" />
+      <TestimonialSection className="testimonial_sec" />
     </AnimateWrapperStyle>
   );
 };
