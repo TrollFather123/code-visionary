@@ -532,10 +532,10 @@ const AnimateWrapper = () => {
     ScrollTrigger.create({
       trigger: mainRef.current,
       start: "top top",
-      end: "150%",
+      end: "350%",
       scrub: 2,
       pin: true,
-      markers: true,
+      markers: false,
       animation: tl
     });
   });
@@ -550,8 +550,8 @@ const AnimateWrapper = () => {
       <ServiceSection className="service_sec" />
       <WhySection className="why_sec" />
       <ProtfolioSection className="portfolio_sec" />
-      <TeamSection />
-      <TestimonialSection />
+      <TeamSection className="team_sec" />
+      <TestimonialSection className="testimonial_sec" />
     </AnimateWrapperStyle>
   );
 };
