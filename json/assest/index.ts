@@ -42,4 +42,7 @@ export default {
   gallery2:"/assets/images/gallery2.jpg",
   gallery3:"/assets/images/gallery3.jpg",
   gallery4:"/assets/images/gallery4.jpeg",
+  design_txt1:"/assets/images/design_txt1.png",
+  design_txt2:"/assets/images/design_txt2.png",
+  design_txt3:"/assets/images/design_txt3.png",
 };

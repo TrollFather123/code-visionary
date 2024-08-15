@@ -146,9 +146,25 @@ const AnimateWrapper = () => {
       y: "100vh"
     });
 
-    gsap.set(".gallery4",{
-      opacity:0
-    })
+    gsap.set(".gallery4", {
+      opacity: 0
+    });
+
+    gsap.set([".design_txt3 img", ".design_txt1 img"], {
+      x: "-100%"
+    });
+    gsap.set(".design_txt2 img", {
+      x: "100%"
+    });
+
+    gsap.set(".teamGrid", {
+      x: "100%",
+      opacity: 0
+    });
+
+    gsap.set(".team_sec_cmn_heading p", {
+      y: "200px"
+    });
 
     const tl = gsap.timeline({
       defaults: {
@@ -399,6 +415,62 @@ const AnimateWrapper = () => {
         },
         "-=.25"
       )
+
+      .to(
+        ".design_txt3 img",
+        {
+          y: "0",
+          x: "0"
+        },
+        "+=.5"
+      )
+      .to(
+        ".design_txt2 img",
+        {
+          y: "0",
+          x: "0%"
+        },
+        "+=.5"
+      )
+      .to(
+        ".design_txt3 img",
+        {
+          y: "0",
+          x: "50%"
+        },
+        "-=1"
+      )
+      .to(
+        ".design_txt1 img",
+        {
+          y: "0",
+          x: "0"
+        },
+        "+=.5"
+      )
+      .to(
+        ".design_txt2 img",
+        {
+          y: "0",
+          x: "-25%"
+        },
+        "-=1"
+      )
+      .to(
+        ".design_txt1 img",
+        {
+          y: "0",
+          x: "50%"
+        },
+        "+=.5"
+      )
+      .to(
+        ".we_sec",
+        {
+          y: "-20vh"
+        },
+        "-=1"
+      )
       .to(
         ".service_sec",
         {
@@ -595,7 +667,7 @@ const AnimateWrapper = () => {
       .to(
         ".gallery4",
         {
-          opacity:1
+          opacity: 1
         },
         "-=1"
       )
@@ -674,14 +746,17 @@ const AnimateWrapper = () => {
         "-=.5"
       )
       .to(
-        [".roll_txt_content p",".roll_txt_heading h3:nth-child(3)",".roll_txt_heading h3:nth-child(2)",".roll_txt_heading h3:nth-child(1)"],
+        [
+          ".roll_txt_content p",
+          ".roll_txt_heading h3:nth-child(3)",
+          ".roll_txt_heading h3:nth-child(2)",
+          ".roll_txt_heading h3:nth-child(1)"
+        ],
         {
           opacity: 1
         },
         "-=1"
       )
-
-
 
       .to(
         ".roll_txt_heading h3:nth-child(4)",
@@ -701,21 +776,21 @@ const AnimateWrapper = () => {
       .to(
         ".roll_txt_content p:nth-child(1)",
         {
-         y:'-150px'
+          y: "-150px"
         },
         "-=1"
       )
       .to(
         ".roll_txt_content p:nth-child(2)",
         {
-         y:'0'
+          y: "0"
         },
         "-=1"
       )
       .to(
         ".gallery1",
         {
-         y:'-100vh'
+          y: "-100vh"
         },
         "-=1"
       )
@@ -738,29 +813,24 @@ const AnimateWrapper = () => {
       .to(
         ".roll_txt_content p:nth-child(2)",
         {
-         y:'-150px'
+          y: "-150px"
         },
         "-=1"
       )
       .to(
         ".roll_txt_content p:nth-child(3)",
         {
-         y:'0'
+          y: "0"
         },
         "-=1"
       )
       .to(
         ".gallery2",
         {
-         y:'-100vh'
+          y: "-100vh"
         },
         "-=1"
       )
-
-
-
-
-
 
       .to(
         ".roll_txt_heading h3:nth-child(2)",
@@ -780,23 +850,101 @@ const AnimateWrapper = () => {
       .to(
         ".roll_txt_content p:nth-child(3)",
         {
-         y:'-150px'
+          y: "-150px"
         },
         "-=1"
       )
       .to(
         ".roll_txt_content p:nth-child(4)",
         {
-         y:'0'
+          y: "0"
         },
         "-=1"
       )
       .to(
         ".gallery3",
         {
-         y:'-100vh'
+          y: "-100vh"
         },
         "-=1"
+      )
+      .to(
+        ".team_sec",
+        {
+          opacity: 1,
+          pointerEvents: "inherit"
+        },
+        "+=1"
+      )
+      .to(
+        ".portfolio_sec",
+        {
+          opacity: 0,
+          pointerEvents: "none"
+        },
+        "-=1"
+      )
+      .to(
+        ".teamGrid",
+        {
+          x: "0",
+          opacity: 1
+        },
+        "+=.25"
+      )
+      .to(
+        ".team_sec_cmn_heading p",
+        {
+          y: "0"
+        },
+        "+=.5"
+      )
+      .to(
+        ".teamCard:nth-child(even)",
+        {
+          marginTop: "40px"
+        },
+        "-=1"
+      )
+
+      .to(
+        ".testimonial_sec",
+        {
+          opacity: 1,
+          pointerEvents: "inherit"
+        },
+        "+=1"
+      )
+
+      .to(
+        ".team_sec",
+        {
+          opacity: 0,
+          pointerEvents: "none"
+        },
+        "-=1"
+      )
+
+      .to(
+        ".testimonial_sec",
+        {
+
+        },
+        "+=1"
+      )
+      .to(
+        ".testimonial_sec",
+        {
+
+        },
+        "+=1"
+      )
+      .to(
+        ".testimonial_sec",
+        {
+
+        },
+        "+=1"
       )
 
     ScrollTrigger.create({
