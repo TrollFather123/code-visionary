@@ -38,4 +38,8 @@ export default {
   img8:"/assets/images/img8.jpeg",
   img9:"/assets/images/img9.jpeg",
   img10:"/assets/images/img10.jpeg",
+  gallery1:"/assets/images/gallery1.jpg",
+  gallery2:"/assets/images/gallery2.jpg",
+  gallery3:"/assets/images/gallery3.jpg",
+  gallery4:"/assets/images/gallery4.jpeg",
 };
