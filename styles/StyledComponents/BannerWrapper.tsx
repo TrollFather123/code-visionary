@@ -10,6 +10,12 @@ export const BannerWrapper = styled(Box)`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 1199px) {
+    padding-top: 150px;
+  }
+  @media (max-width: 599px) {
+    padding-top: 100px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -43,6 +49,9 @@ export const BannerWrapper = styled(Box)`
     .content_box {
       margin-bottom: 100px;
       font-size: 24px;
+      @media (max-width: 899px) {
+        margin-bottom: 50px;
+      }
 
       h1 {
         /* font-size: 40px; */

@@ -11,7 +11,7 @@ const TestimonialSection = ({ className }: TestimonialSectionProps) => {
   return (
     <TestimonialSectionWrapper className={clsx("cmn_gap", className)}>
       <Container fixed>
-        <Grid container spacing={3} alignItems="center">
+        <Grid container spacing={3} rowSpacing={8} alignItems="center">
           <Grid item xs={12} md={6}>
             <TestimonialCarousel />
           </Grid>

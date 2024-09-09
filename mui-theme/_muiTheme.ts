@@ -49,8 +49,16 @@ export const MuiThemeOptions = (mode: PaletteMode): ThemeOptions => {
         lineHeight: "1.1em",
         fontWeight: "700",
         fontFamily: earth_orbiter.style.fontFamily,
-        "@media(max-width:991px)": {
-          fontSize: "22px",
+        "@media(max-width:1199px)": {
+          fontSize: "70px",
+          lineHeight: "1.1em"
+        },
+        "@media(max-width:899px)": {
+          fontSize: "60px",
+          lineHeight: "1.1em"
+        },
+        "@media(max-width:599px)": {
+          fontSize: "50px",
           lineHeight: "1.1em"
         }
       },
@@ -59,9 +67,17 @@ export const MuiThemeOptions = (mode: PaletteMode): ThemeOptions => {
         lineHeight: "1.1em",
         fontWeight: "400",
         fontFamily: earth_orbiter.style.fontFamily,
-        "@media(max-width:991px)": {
-          fontSize: "22px",
-          lineHeight: "26px"
+        "@media(max-width:1199px)": {
+          fontSize: "40px",
+          lineHeight: "1.1em"
+        },
+        "@media(max-width:899px)": {
+          fontSize: "32px",
+          lineHeight: "1.1em"
+        },
+        "@media(max-width:599px)": {
+          fontSize: "26px",
+          lineHeight: "1.1em"
         }
       },
       h3: {
@@ -90,7 +106,7 @@ export const MuiThemeOptions = (mode: PaletteMode): ThemeOptions => {
         fontWeight: "500",
         fontFamily: earth_orbiter.style.fontFamily,
         "@media(max-width:991px)": {
-          fontSize: "12px",
+          fontSize: "15px",
           lineHeight: "1.4"
         }
       },

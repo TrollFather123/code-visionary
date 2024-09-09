@@ -5,8 +5,17 @@ import { Box, styled } from "@mui/material";
 export const TestimonialSectionWrapper = styled(Box)`
 display: flex;
 align-items: center;
+&.testimonial_sec {
+  @media (max-width:599px) {
+  padding-bottom: 50px !important;
+}
+}
+
   .testiRgt_col {
     padding-left: 100px;
+    @media (max-width:899px) {
+      padding-left: 0;
+    }
   }
 `;
 export const TestimonialCarouselWrapper = styled(Box)`
@@ -17,6 +26,7 @@ export const TestimonialCarouselWrapper = styled(Box)`
     transform: translateY(-50%);
     left: 0;
     width: 100%;
+    z-index: 9;
     .next_arrow {
       position: absolute;
       right: 0;

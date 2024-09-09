@@ -7,6 +7,10 @@ export const ProtfolioSectionWrapper = styled(Box)`
   position: relative;
   z-index: 1;
   overflow: hidden;
+  @media (max-width:1199px) {
+    height: auto !important;
+    
+  }
   &::before {
     content: "";
     position: absolute;
@@ -37,6 +41,15 @@ export const ProtfolioSectionWrapper = styled(Box)`
     width: calc(100% / 3);
     height: 100vh;
     z-index: 9;
+    @media (max-width:1199px) {
+      position: static;
+      width: 50%;
+    }
+    @media (max-width:899px) {
+      position: static;
+      width: 100%;
+      object-fit: cover;
+    }
     &.gallery2{
       left: 33.33%;
       z-index: 8;
@@ -68,9 +81,19 @@ export const ProtfolioSectionWrapper = styled(Box)`
       text-fill-color: transparent;
       opacity: 0.4;
       line-height: 1;
+      @media (max-width:899px) {
+        font-size: 78px;
+      }
+      @media (max-width:599px) {
+        font-size: 58px;
+      }
     }
     .prot_btm {
       margin-top: 100px;
+      @media (max-width:1199px) {
+        margin-top: 50px;
+        margin-bottom: 30px;
+      }
       .port_btn {
         min-width: 212px;
         min-height: 60px;
@@ -99,6 +122,12 @@ export const ProtfolioSectionWrapper = styled(Box)`
     min-height: 50px;
     overflow: hidden;
     margin-bottom: 70px;
+    @media (max-width: 899px) {
+       margin-bottom: 50px;
+      }
+      @media (max-width: 599px) {
+        margin-bottom: 30px;
+      }
     h3{
       font-size: 48px;
       font-weight: 700;
@@ -106,7 +135,17 @@ export const ProtfolioSectionWrapper = styled(Box)`
       position: absolute;
       left: 0;
       top: 0;
-   
+      @media (max-width: 1199px) {
+        position: relative;
+      }
+      @media (max-width: 899px) {
+        position: relative;
+        font-size: 38px;
+      }
+      @media (max-width: 599px) {
+        position: relative;
+        font-size: 28px;
+      }
     }
   }
   .roll_txt_content{
@@ -120,6 +159,11 @@ export const ProtfolioSectionWrapper = styled(Box)`
       position: absolute;
       left: 0;
       top: 0;
+      @media (max-width: 599px) {
+        width: 100%;
+        font-size: 16px;
+        
+      }
     }
   }
 `;

@@ -5,6 +5,9 @@ export const WeSectionWrapper = styled(Box)`
   height: 100vh;
   position: relative;
   z-index: 1;
+  @media (max-width:1199px) {
+    height: auto;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -32,6 +35,10 @@ export const WeSectionWrapper = styled(Box)`
   .design_txt {
     display: flex;
     flex-direction: column;
+    
+    @media (max-width:1199px) {
+      justify-content: center;
+    }
     figure {
       margin-bottom: 80px;
       position: relative;
@@ -40,7 +47,23 @@ export const WeSectionWrapper = styled(Box)`
       overflow: hidden;
       display: flex;
       align-items: center;
+
       height: 130px;
+      @media (max-width: 1199px) {
+        margin-bottom: 50px;
+        justify-content: center;
+
+      }
+      @media (max-width: 899px) {
+        margin-bottom: 30px;
+        height: 100px;
+        
+      }
+      @media (max-width: 599px) {
+        margin-bottom: 20px;
+        height: 80px;
+        
+      }
       &:last-child {
         margin-bottom: 0;
       }

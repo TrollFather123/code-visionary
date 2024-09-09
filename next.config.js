@@ -29,7 +29,7 @@ module.exports = withPWA({
   compiler: {
     removeConsole: process.env.NODE_ENV === "production"
   },
-  output: "export",
+  // output: "export",
   env: {
     NEXT_APP_BASE_URL: process.env.NEXT_APP_BASE_URL
   },

@@ -82,25 +82,25 @@ export default function Header() {
     });
   }, []);
 
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <Link href={item?.route} key={item.name}>
-            <ListItem disablePadding>
-              <ListItemButton sx={{ textAlign: "center" }}>
-                <ListItemText primary={item.name} />
-              </ListItemButton>
-            </ListItem>
-          </Link>
-        ))}
-      </List>
-    </Box>
-  );
+  // const drawer = (
+  //   <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+  //     <Typography variant="h6" sx={{ my: 2 }}>
+  //       MUI
+  //     </Typography>
+  //     <Divider />
+  //     <List>
+  //       {navItems.map((item) => (
+  //         <Link href={item?.route} key={item.name}>
+  //           <ListItem disablePadding>
+  //             <ListItemButton sx={{ textAlign: "center" }}>
+  //               <ListItemText primary={item.name} />
+  //             </ListItemButton>
+  //           </ListItem>
+  //         </Link>
+  //       ))}
+  //     </List>
+  //   </Box>
+  // );
 
   // const container =
   //   window !== undefined ? () => window().document.body : undefined;
@@ -133,7 +133,7 @@ export default function Header() {
       >
         <Container fixed>
           <Toolbar>
-            <IconButton
+            {/* <IconButton
               color="inherit"
               aria-label="open drawer"
               edge="start"
@@ -141,7 +141,7 @@ export default function Header() {
               sx={{ mr: 2, display: { sm: "none" } }}
             >
               <MenuIcon />
-            </IconButton>
+            </IconButton> */}
             <Link href="/" className="headerLogo">
               <Image src={assest.logo} width={240} height={64} alt="Logo" />
             </Link>
@@ -219,7 +219,7 @@ export default function Header() {
           </Toolbar>
         </Container>
       </AppBar>
-      <Box component="nav">
+      {/* <Box component="nav">
         <Drawer
           variant="temporary"
           open={mobileOpen}
@@ -237,7 +237,7 @@ export default function Header() {
         >
           {drawer}
         </Drawer>
-      </Box>
+      </Box> */}
       <Toolbar />
     </HeaderWrap>
   );

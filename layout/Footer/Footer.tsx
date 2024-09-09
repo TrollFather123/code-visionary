@@ -29,8 +29,29 @@ const FooterWrap = styled(Box)`
   background: linear-gradient(#e44f58, #bf242d, #5f0006);
   box-shadow: 0 -4px 8px rgba(137, 226, 255, 0.2);
   border-radius: 60px 60px 0 0;
+  @media (max-width: 1199px) {
+    position: relative;
+  }
+  @media (max-width: 899px) {
+    position: relative;
+    border-radius: 40px 40px 0 0;
+  }
+  @media (max-width: 599px) {
+    position: relative;
+    border-radius: 25px 25px 0 0;
+
+  }
   .ftr_top {
     padding: 80px 0 106px;
+    @media (max-width: 1199px) {
+      padding-bottom: 60px;
+    }
+    @media (max-width: 899px) {
+      padding: 50px 0 50px;
+    }
+    @media (max-width: 599px) {
+      padding: 30px 0 30px;
+    }
     h2 {
       color: ${primaryColors.textPrimaryColor};
       margin-bottom: 40px;
@@ -44,6 +65,13 @@ const FooterWrap = styled(Box)`
       border-radius: 69px;
       margin-top: 80px;
       text-transform: uppercase;
+      @media (max-width: 1199px) {
+        margin-top: 40px;
+      }
+      @media (max-width: 479px) {
+        margin-top: 25px;
+        padding: 12px 18px;
+      }
       &:hover {
         color: ${primaryColors.black};
       }
@@ -53,11 +81,26 @@ const FooterWrap = styled(Box)`
     margin-bottom: 60px;
     .ftrLft_col {
       padding-right: 125px;
+      @media (max-width: 1199px) {
+        padding-right: 40px;
+      }
+      @media (max-width: 899px) {
+        padding-right: 0px;
+        
+      }
+      @media (max-width: 599px) {
+        padding-right: 0px;
+        text-align: center;
+      }
+
       .ftr_logo {
         display: inline-block;
         max-width: 240px;
         margin-bottom: 28px;
         line-height: 1;
+        @media (max-width: 1199px) {
+          width: 180px;
+        }
         img {
           width: 100%;
         }
@@ -67,17 +110,50 @@ const FooterWrap = styled(Box)`
         font-weight: 400;
         color: ${primaryColors.white};
         font-family: ${montserrat.style.fontFamily};
+        @media (max-width: 899px) {
+          font-size: 18px;
+        }
+        @media (max-width: 599px) {
+          font-size: 16px;
+        }
       }
     }
     .ftrRgt_row {
       display: flex;
       flex-wrap: wrap;
       padding-left: 90px;
+      @media (max-width:1199px) {
+        padding-left: 0;
+      }
+      @media (max-width:599px) {
+        width: 100%;
+        justify-content: center;
+        
+      }
       .ftrRgt_col {
         width: 30%;
+        @media (max-width:899px) {
+        width: 40%;
+      }
+      @media (max-width:599px) {
+        width: 100%;
+        justify-content: center;
+      }
         &.ftrRgt_Add {
           width: 70%;
           padding-left: 90px;
+          @media (max-width: 1199px) {
+            padding-left: 40px;
+          }
+          @media (max-width:899px) {
+        width: 60%;
+        padding-left: 25px;
+      }
+      @media (max-width:599px) {
+        width: 100%;
+        padding-left: 0px;
+        margin-top: 30px;
+      }
         }
         .ftr_hding {
           font-size: 24px;
@@ -86,9 +162,15 @@ const FooterWrap = styled(Box)`
           line-height: 1;
           margin-bottom: 16px;
           text-transform: uppercase;
+          @media (max-width:599px) {
+        text-align: center;
+      }
         }
         ul {
           li {
+            @media (max-width:599px) {
+        justify-content: center;
+      }
             :not(:last-child) {
               margin-bottom: 16px;
             }
@@ -101,6 +183,14 @@ const FooterWrap = styled(Box)`
               font-family: ${montserrat.style.fontFamily};
               line-height: 1;
               text-transform: capitalize;
+              @media (max-width:899px) {
+        text-align: center;
+        font-size: 18px;
+      }
+      @media (max-width:599px) {
+        text-align: center;
+        font-size: 16px;
+      }
               &.ftr_mail {
                 text-transform: none;
               }
@@ -115,6 +205,14 @@ const FooterWrap = styled(Box)`
               color: ${primaryColors.white};
               font-family: ${montserrat.style.fontFamily};
               line-height: 1.1;
+              @media (max-width:599px) {
+        text-align: center;
+        font-size: 18px;
+      }
+      @media (max-width:599px) {
+        text-align: center;
+        font-size: 16px;
+      }
             }
           }
         }
@@ -124,6 +222,9 @@ const FooterWrap = styled(Box)`
   .ftr_btm {
     padding-bottom: 64px;
     overflow: hidden;
+    @media (max-width: 899px) {
+      padding-bottom: 48px;
+    }
     .sliding_heading {
       display: flex;
       align-items: center;
@@ -150,6 +251,12 @@ const FooterWrap = styled(Box)`
           white-space: nowrap;
           font-size: 128px;
           text-transform: uppercase;
+          @media (max-width:899px) {
+            font-size: 90px;
+          }
+          @media (max-width:599px) {
+            font-size: 70px;
+          }
         }
       }
     }
@@ -314,8 +421,8 @@ const Footer = () => {
           </Box>
         </Box>
 
-        <Grid container spacing={2} className="ftrMid_row">
-          <Grid item md={6} xs={12}>
+        <Grid container spacing={2} rowSpacing={4} className="ftrMid_row">
+          <Grid item md={6} sm={12} xs={12}>
             <Box className="ftrLft_col">
               <Link href="/" className="ftr_logo">
                 <Image
@@ -334,7 +441,7 @@ const Footer = () => {
             </Box>
           </Grid>
 
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} sm={12} xs={12}>
             <Box className="ftrRgt_row">
               <Box className="ftrRgt_col">
                 <Typography variant="body1" className="ftr_hding">

@@ -11,6 +11,9 @@ export const HeaderWrap = styled(Box)`
   box-shadow: 0px 4px 58px rgba(0, 0, 0, 0.07);
   padding: 32px 0;
   z-index: 999;
+  @media (max-width: 1199px) {
+    padding: 20px 0;
+  }
   &.siteHeader_shrinked {
     padding: 16px 0;
     background: rgba(255, 255, 255, 0.15);
@@ -34,10 +37,30 @@ export const HeaderWrap = styled(Box)`
       backdrop-filter: blur(10px);
       transition: all 0.3s ease-in-out;
       margin-right: 60px;
+      @media (max-width:1199px) {
+        width: 60px;
+        height: 60px;
+        margin-right: 30px;
+      }
+      @media (max-width:899px) {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        min-width: auto;
+      }
+      @media (max-width:599px) {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        min-width: auto;
+      }
       &:hover {
         .btn_line {
           &.top {
             transform: translateX(10px);
+            @media (max-width:899px) {
+       font-size: 10px;
+      }
           }
           &.bottom {
             transform: translateX(-10px);
@@ -51,6 +74,9 @@ export const HeaderWrap = styled(Box)`
         background: ${primaryColors.white};
         border-radius: 12px;
         transition: all 0.3s ease-in-out;
+        @media (max-width:899px) {
+       width: 20px;
+      }
         &.top {
           margin-bottom: 12px;
         }
@@ -74,6 +100,26 @@ export const HeaderWrap = styled(Box)`
       justify-content: space-between;
       overflow: hidden;
       transition: all 0.3s ease-in-out;
+      @media (max-width: 1199px) {
+        padding: 16px 22px;
+        min-width: auto;
+        font-size: 20px;
+      }
+      @media (max-width: 899px) {
+        padding: 12px 18px;
+        min-width: auto;
+        font-size: 16px;
+      }
+      @media (max-width: 599px) {
+        padding: 12px 16px;
+        min-width: auto;
+        font-size: 14px;
+      }
+      @media (max-width: 479px) {
+        padding: 12px 6px;
+        min-width: auto;
+        font-size: 14px;
+      }
       &:hover {
         .default-text,
         .hovered-text {
@@ -102,6 +148,18 @@ export const HeaderWrap = styled(Box)`
         line-height: 1;
         color: ${primaryColors.white};
         transition: all 0.3s ease-in-out;
+        @media (max-width: 1199px) {
+          font-size: 20px;
+        }
+        @media (max-width: 899px) {
+          font-size: 18px;
+        }
+        @media (max-width: 599px) {
+          font-size: 14px;
+        }
+        @media (max-width: 479px) {
+          font-size: 12px;
+        }
       }
       .default-text {
         transform: translateY(0) rotate(0);
@@ -141,5 +199,14 @@ export const HeaderWrap = styled(Box)`
     max-width: 240px;
     display: inline-block;
     transition: all 0.4s;
+    @media (max-width: 899px) {
+      max-width: 180px;
+    }
+    @media (max-width: 599px) {
+      max-width: 150px;
+    }
+    @media (max-width: 479px) {
+      max-width: 120px;
+    }
   }
 `;

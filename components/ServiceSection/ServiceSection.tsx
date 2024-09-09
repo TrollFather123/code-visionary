@@ -19,7 +19,7 @@ const ServiceSection:React.FC<BoxProps> = ({className,...props}) => {
         />
       <Box className="gallery">
       <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={12} sm={12} lg={6}>
             <Box className="serviceBox">
               <Box className="serviceBox_cnt">
                 <Typography variant="h3">
@@ -53,7 +53,7 @@ const ServiceSection:React.FC<BoxProps> = ({className,...props}) => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={6} sm={12} lg={3}>
             <Box className="serviceBox">
               <Typography variant="h3">
                 Mobile Application Design & Development
@@ -75,7 +75,7 @@ const ServiceSection:React.FC<BoxProps> = ({className,...props}) => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={6} sm={12} lg={3}>
             <Box className="serviceBox">
               <Typography variant="h3">Branding</Typography>
               <Image
@@ -95,7 +95,7 @@ const ServiceSection:React.FC<BoxProps> = ({className,...props}) => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={4} sm={12} >
             <Box className="serviceBox">
               <Typography variant="h3" sx={{ pt: 8, px: 3 }}>
                 Digital Marketing
@@ -117,7 +117,7 @@ const ServiceSection:React.FC<BoxProps> = ({className,...props}) => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={4} sm={12}>
             <Box className="serviceBox">
               <Typography variant="h3">UI/UX Design</Typography>
               <Image
@@ -137,7 +137,7 @@ const ServiceSection:React.FC<BoxProps> = ({className,...props}) => {
             </Box>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={4} sm={12}>
             <Box className="serviceBox">
               <Typography variant="h3">Web Applications</Typography>
               <Image

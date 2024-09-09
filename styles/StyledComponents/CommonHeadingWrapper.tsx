@@ -20,6 +20,9 @@ export const CommonHeadingWrapper = styled(Box, {
     align-items: center;
     justify-content: center;
     margin-bottom: 48px;
+    @media (max-width: 899px) {
+      margin-bottom: 30px;
+    }
     i {
       display: inline-block;
       margin-right: 16px;
@@ -44,6 +47,15 @@ export const CommonHeadingWrapper = styled(Box, {
     line-height: 1.1;
     margin-bottom: 24px;
     font-family: ${earth_orbiter.style.fontFamily};
+    @media (max-width: 899px) {
+      font-size: 38px;
+    }
+    @media (max-width: 599px) {
+      font-size: 30px;
+    }
+    @media (max-width: 479px) {
+      font-size: 25px;
+    }
   }
   p {
     font-size: 20px;
@@ -52,5 +64,8 @@ export const CommonHeadingWrapper = styled(Box, {
     color: ${primaryColors.white};
     max-width: ${({maxWidthBlock}) => maxWidthBlock ? `${maxWidthBlock}px` : ''};
     margin:0 auto;
+    @media (max-width:599px) {
+      font-size: 16px;
+    }
   }
 `;

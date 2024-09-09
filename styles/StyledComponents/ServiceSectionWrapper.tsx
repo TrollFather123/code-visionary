@@ -33,6 +33,10 @@ export const ServiceSectionWrapper = styled(Box)`
       position: relative;
       z-index: 30;
       width: 65%;
+      @media (max-width: 599px) {
+        width: 100%;
+        
+      }
     }
     h3 {
       font-size: 24px;

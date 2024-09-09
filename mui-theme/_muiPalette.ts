@@ -2,6 +2,7 @@
 //  MUI pallete colors will be listed here
 
 import { PaletteMode, PaletteOptions } from "@mui/material";
+import { color } from "@mui/system";
 
 export const primaryColors = {
   primary: "#C44F56",
@@ -53,7 +54,10 @@ export const primaryColors = {
   colorffffff90: "#ffffff90",
   color333333: "#333333",
   color192527: "#192527",
-  color575F61: "#575F61"
+  color575F61: "#575F61",
+  colorBABABA: "#BABABA",
+  colorE2E2E2: "#E2E2E2"
+  
 };
 
 export const pallete = (mode: PaletteMode): PaletteOptions => {

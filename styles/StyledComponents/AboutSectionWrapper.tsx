@@ -42,25 +42,66 @@ export const AboutSectionWrapper = styled(Box)`
     margin-top: 50px;
     position: relative;
     min-height: calc(100vh - 450px);
+    @media (max-width: 1199px) {
+      min-height:  100%;
+      margin: 0 -10px;
+      margin-top: 20px;
+      
+    }
     .cmn_img {
       box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.15);
       border-radius: 16px;
       position: absolute;
+      @media (max-width: 1199px) {
+      position: relative;
+      width: calc(50% - 10px);
+      padding: 10px;
+      display: inline-flex;
+      box-shadow: none;
+    }
+    @media (max-width: 899px) {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 10px;
+    }
       &.img2 {
         left: 0;
         top: 0;
+        @media (max-width: 1199px) {
+     position: relative;
+     left: 0 ;
+     top: 0;
+    }
       }
       &.img7 {
         left: 50%;
         top: -50px;
+        @media (max-width: 1199px) {
+      min-height:  100%;
+      position: relative;
+     left: 0 ;
+     top: 0;
+    }
       }
       &.img5 {
         left: 20%;
         top: 300px;
+        @media (max-width: 1199px) {
+      min-height:  100%;
+      position: relative;
+     left: 0 ;
+     top: 0;
+    }
       }
       &.img1 {
         right: 0;
         top: 300px;
+        @media (max-width: 1199px) {
+      min-height:  100%;
+      position: relative;
+     left: 0 ;
+     top: 0;
+    }
       }
     }
   }

@@ -4,6 +4,9 @@ import Box from "@mui/material/Box";
 export const WrapperStyle = styled(Box)`
   .main_body {
     min-height: calc(100vh - 96px);
+    @media (max-width: 1199px) {
+      min-height: auto;
+    }
   }
   strong,
   b {
@@ -168,6 +171,18 @@ export const WrapperStyle = styled(Box)`
     z-index: 1;
     /* display: flex;
     align-items: center; */
+    @media (max-width: 1199px) {
+      position: relative;
+      padding: 80px 0 50px;
+    }
+    @media (max-width: 899px) {
+      position: relative;
+      padding: 60px 0 50px;
+    }
+    @media (max-width: 599px) {
+      position: relative;
+      padding: 40px 0 40px;
+    }
   }
 
   .cmn_gap_top {

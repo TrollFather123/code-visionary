@@ -10,13 +10,16 @@ import { useRouter } from "next/router";
 import React from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import InnerFooter from "@/components/InnerFooter/InnerFooter";
 
 interface wrapperProps {
   children: JSX.Element | JSX.Element[];
+  isInner?: boolean;
 }
 
 const Wrapper = (props: wrapperProps) => {
   const { children } = props;
+  const { isInner } = props;
 
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
@@ -62,8 +65,7 @@ const Wrapper = (props: wrapperProps) => {
       <Header />
 
       <Box className="body_content">{children}</Box>
-
-      <Footer />
+      {isInner ? <InnerFooter /> : <Footer />}
 
       <Backdrop
         sx={{
